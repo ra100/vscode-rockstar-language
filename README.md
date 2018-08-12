@@ -6,9 +6,16 @@ VSCode syntax grammar for the [Rockstar programming language](https://github.com
 
 Syntax higlighting.
 
+![](./assets/screenshot.png)
+
+## Missing
+
+- proper variables highlight
+- other issues I didn't notice
+
 ## Credits
 
-All credits go to [thestd](https://github.com/thestd/language-rockstar), this is just clone of Atom plugin.
+Based on [thestd](https://github.com/thestd/language-rockstar)
 
 ## License
 
