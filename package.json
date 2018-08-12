@@ -4,6 +4,10 @@
     "description": "Support for Rockstar programming language",
     "version": "0.0.1",
     "publisher": "ra100",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ra100/vscode-rockstar-language.git"
+    },
     "engines": {
         "vscode": "^1.25.0"
     },
