@@ -1,0 +1,31 @@
+{
+    "name": "rockstar-language",
+    "displayName": "Rockstar Language",
+    "description": "Support for Rockstar programming language",
+    "version": "0.0.1",
+    "publisher": "ra100",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rockstar",
+            "aliases": [
+                "Rockstar",
+                "rockstar"
+            ],
+            "extensions": [
+                "rock"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rockstar",
+            "scopeName": "source.rockstar",
+            "path": "./syntaxes/rockstar.tmLanguage.json"
+        }]
+    }
+}

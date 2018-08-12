@@ -1,0 +1,189 @@
+{
+	"scopeName": "source.rockstar",
+	"name": "Rockstar",
+	"information_for_contributors": [
+		"This file has been converted from https://github.com/thestd/language-rockstar/blob/master/grammars/rockstar.cson",
+		"If you want to provide a fix or improvement, please create a pull request against the original repository.",
+		"Once accepted there, we are happy to receive an update request."
+	],
+	"version": "https://github.com/thestd/language-rockstar/commit/c50304fc604eeb77047510fed7dea81b1bca068b",
+	"fileTypes": [
+		"rock",
+		"rockstar"
+	],
+	"patterns": [{
+			"include": "#comment"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#null"
+		},
+		{
+			"include": "#common"
+		},
+		{
+			"include": "#pronoun"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#separator"
+		},
+		{
+			"include": "#equal"
+		},
+		{
+			"include": "#comparator"
+		},
+		{
+			"include": "#loop"
+		},
+		{
+			"include": "#conditional"
+		},
+		{
+			"include": "#method"
+		},
+		{
+			"include": "#io"
+		},
+		{
+			"include": "#assignment"
+		},
+		{
+			"include": "#arithmetic"
+		}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [{
+				"begin": "\\(",
+				"beginCaptures": {
+					"0": {
+						"name": "punctuation.definition.comment.begin.rockstar"
+					}
+				},
+				"end": "\\)",
+				"endCaptures": {
+					"0": {
+						"name": "punctuation.definition.comment.end.rockstar"
+					}
+				},
+				"name": "punctuation.definition.comment.block.rockstar"
+			}]
+		},
+		"boolean": {
+			"patterns": [{
+				"match": "\\b(true|false|right|yes|ok|wrong|no($| +)|lies)\\b",
+				"name": "constant.language.rockstar"
+			}]
+		},
+		"null": {
+			"patterns": [{
+				"match": "\\b(nothing|nowhere|nobody|null)\\b",
+				"name": "constant.language.rockstar"
+			}]
+		},
+		"common": {
+			"patterns": [{
+				"match": "(A|An|The|My|Your)\\i[ ][a-z]+",
+				"name": "variable.other.rockstar"
+			}]
+		},
+		"pronoun": {
+			"patterns": [{
+				"match": "\\b(it|he|she|him|her|them|they)\\b",
+				"name": "variable.other.rockstar"
+			}]
+		},
+		"number": {
+			"patterns": [{
+				"match": "\\d+(\\.\\d*)?|\\.\\d+",
+				"name": "constant.numeric.rockstar"
+			}]
+		},
+		"separator": {
+			"patterns": [{
+					"begin": "\"",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.rockstar"
+						}
+					},
+					"end": "\"",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.rockstar"
+						}
+					},
+					"name": "punctuation.definition.string.text.rockstar"
+				},
+				{
+					"match": "'\\w*'",
+					"name": "punctuation.definition.string.begin.rockstar"
+				},
+				{
+					"match": ",",
+					"scope": "punctuation.definition.separator.rockstar"
+				}
+			]
+		},
+		"equal": {
+			"patterns": [{
+				"match": "\\b('s|is( not($| +))?|ain't|was|were)\\b",
+				"name": "keyword.other.rockstar"
+			}]
+		},
+		"comparator": {
+			"patterns": [{
+				"match": "(higher|greater|bigger|stronger|lower|less|smaller|weaker) than|as (high|great|big|strong|low|little|small|weak) as",
+				"name": "keyword.other.rockstar"
+			}]
+		},
+		"loop": {
+			"patterns": [{
+				"match": "(^| )(While|Until|Continue|Break it down|break|Take it to the top)($| )",
+				"name": "keyword.control.rockstar"
+			}]
+		},
+		"conditional": {
+			"patterns": [{
+				"match": "(^| )(If|if|Else|else)",
+				"name": "keyword.control.conditional.rockstar"
+			}]
+		},
+		"method": {
+			"patterns": [{
+				"match": "\\b(taking|takes|and|Give back)\\b",
+				"name": "keyword.other.rockstar"
+			}]
+		},
+		"io": {
+			"patterns": [{
+				"match": "(^| )(Say|Shout|Whisper|Scream|Listen( to)?)",
+				"name": "keyword.other.rockstar"
+			}]
+		},
+		"assignment": {
+			"patterns": [{
+				"match": "(^| )(Put|into)($| )",
+				"name": "keyword.other.rockstar"
+			}]
+		},
+		"arithmetic": {
+			"patterns": [{
+				"match": "(Knock | down|Build | up|plus|without|minus|with|times|of|over|by)",
+				"name": "keyword.other.rockstar"
+			}]
+		},
+		"variable": {
+			"patterns": [{
+				"match": "(^| +)[a-zA-Z]*($| +)",
+				"name": "variable.other.rockstar"
+			}]
+		}
+	}
+}
