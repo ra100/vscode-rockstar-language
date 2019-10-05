@@ -6,7 +6,7 @@
 		"rockstar"
 	],
 	"patterns": [{
-		"inclure": "#proper-variable"
+		"include": "#proper-variable"
 	}, {
 		"include": "#loop"
 	}, {
@@ -205,7 +205,7 @@
 		"proper-variable": {
 			"patterns": [{
 				"match": "(?!(Say|Put|Shout|Whisper|If|Until|Build)\\s)\\b([A-Z][a-zA-Z]*($|\\s))+",
-				"name": "string.double.rockstar"
+				"name": "storage.type.pronoun.rockstar"
 			}]
 		}
 	}
