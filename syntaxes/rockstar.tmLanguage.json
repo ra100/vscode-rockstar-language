@@ -102,19 +102,6 @@
 				}
 			}]
 		},
-		"string-assignment": {
-			"patterns": [{
-				"match": " (says) (.*)$",
-				"captures": {
-					"1": {
-						"name": "keyword.operator.rockstar"
-					},
-					"2": {
-						"name": "string.double.rockstar"
-					}
-				}
-			}]
-		},
 		"string": {
 			"patterns": [{
 					"begin": "\"",
@@ -204,8 +191,18 @@
 		},
 		"proper-variable": {
 			"patterns": [{
-				"match": "(?!(Say|Put|Shout|Whisper|If|Until|Build)\\s)\\b([A-Z][a-zA-Z]*($|\\s))+",
-				"name": "storage.type.pronoun.rockstar"
+				"match": "\\b(?:(\\b(says) ([A-Za-z\\s]+))|(?!(?:Say|Shout|Whisper|Scream|Listen(?: to)?|Put|If|Until|Build|Take it to the top|Knock|While|Continue|Break it down|My|Your|An?|The)\\s)\\b([A-Z][a-zA-Z]*(?:\\s+[A-Z][a-zA-Z]*)*)(?!\\S))",
+				"captures": {
+					"2": {
+						"name": "keyword.operator.rockstar"
+					},
+					"3": {
+						"name": "string.double.rockstar"
+					},
+					"4": {
+						"name": "storage.type.pronoun.rockstar"
+					}
+				}
 			}]
 		}
 	}
