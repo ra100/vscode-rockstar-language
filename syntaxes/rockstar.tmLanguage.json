@@ -105,18 +105,8 @@
 		"string": {
 			"patterns": [{
 					"begin": "\"",
-					"beginCaptures": {
-						"0": {
-							"name": "string.double.rockstar"
-						}
-					},
 					"end": "\"",
-					"endCaptures": {
-						"0": {
-							"name": "string.double.rockstar"
-						}
-					},
-					"name": "string.double.rockstar"
+					"contentName": "string.double.rockstar"
 				},
 				{
 					"match": "'\\w*'",
