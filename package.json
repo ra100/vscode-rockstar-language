@@ -2,7 +2,7 @@
     "name": "rockstar-language",
     "displayName": "Rockstar Language",
     "description": "Support for Rockstar programming language",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "ra100",
     "repository": {
         "type": "git",
